@@ -107,11 +107,11 @@
     <jaiext.version>1.1.25</jaiext.version>
     <java.awt.headless>true</java.awt.headless>
     <sun.java2d.d3d>true</sun.java2d.d3d>
-    <jvm.opts></jvm.opts>
+    <jvm.opts/>
     <jalopy.phase>disabled</jalopy.phase>
     <jalopy.srcExcludesPattern>disabled</jalopy.srcExcludesPattern>
     <test.maxHeapSize>512M</test.maxHeapSize>
-    <test.excludedGroups></test.excludedGroups>
+    <test.excludedGroups/>
     <test.exclude.pattern>none</test.exclude.pattern>
     <quietTests>true</quietTests>
     <remoteOwsTests>false</remoteOwsTests>
@@ -148,14 +148,14 @@
     <solrj.version>8.11.3</solrj.version>
     <mockito.version>5.6.0</mockito.version>
     <jacoco.version>0.8.6</jacoco.version>
-    <hazelcast.version>5.3.6</hazelcast.version>
+    <hazelcast.version>5.4.0</hazelcast.version>
     <xalan.version>2.7.3</xalan.version>
     <argLine>-Xmx${test.maxHeapSize} -enableassertions ${jvm.opts} -Djava.awt.headless=${java.awt.headless} -Dsun.java2d.d3d=${sun.java2d.d3d} -DremoteOwsTests=${remoteOwsTests} -DquietTests=${quietTests} -Dorg.geotools.image.test.enabled=${image.tests} -Dorg.geotools.image.test.interactive=${interactive.image} -Duser.timezone=${user.timezone} -Dwindows.leniency=${windows.leniency} -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=240m</argLine>
     <spotless.action>apply</spotless.action>
     <spotless.apply.skip>false</spotless.apply.skip>
     <pom.fmt.action>sort</pom.fmt.action>
     <pom.fmt.skip>${spotless.apply.skip}</pom.fmt.skip>
-    <errorProneFlags></errorProneFlags>
+    <errorProneFlags/>
     <errorProne.version>2.18.0</errorProne.version>
     <javac.version>9+181-r4173-1</javac.version>
     <pmd.version>6.42.0</pmd.version>
@@ -2335,22 +2335,22 @@
                 <configuration>
                   <target>
                     <loadproperties prefix="gt">
-                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gt-main-${gt.version}.jar"></zipentry>
+                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gt-main-${gt.version}.jar"/>
                     </loadproperties>
                     <loadproperties prefix="gwc">
-                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gwc-core-${gwc.version}.jar"></zipentry>
+                      <zipentry name="META-INF/MANIFEST.MF" zipfile="target/dependency/gwc-core-${gwc.version}.jar"/>
                     </loadproperties>
                     <copy file="release/VERSION.txt" filtering="true" todir="target">
                       <filterset begintoken="$${" endtoken="}">
-                        <filter token="project.version" value="${project.version}"></filter>
-                        <filter token="build.revision" value="${build.commit.id}"></filter>
-                        <filter token="build.branch" value="${build.branch}"></filter>
-                        <filter token="build.timestamp" value="${build.timestamp}"></filter>
-                        <filter token="gt.version" value="${gt.version}"></filter>
-                        <filter token="gt.revision" value="${gt.Git-Revision}"></filter>
-                        <filter token="gwc.version" value="${gwc.version}"></filter>
-                        <filter token="gwc.revision" value="${gwc.Implementation-Version}"></filter>
-                        <filter token="build.hudsonId" value="${build.hudsonId}"></filter>
+                        <filter token="project.version" value="${project.version}"/>
+                        <filter token="build.revision" value="${build.commit.id}"/>
+                        <filter token="build.branch" value="${build.branch}"/>
+                        <filter token="build.timestamp" value="${build.timestamp}"/>
+                        <filter token="gt.version" value="${gt.version}"/>
+                        <filter token="gt.revision" value="${gt.Git-Revision}"/>
+                        <filter token="gwc.version" value="${gwc.version}"/>
+                        <filter token="gwc.revision" value="${gwc.Implementation-Version}"/>
+                        <filter token="build.hudsonId" value="${build.hudsonId}"/>
                       </filterset>
                     </copy>
                   </target>
