@@ -54,7 +54,7 @@
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>jakarta.mail</artifactId>
-            <version>1.4</version>
+            <version>1.6.8</version>
         </dependency>	
         <dependency>
           <groupId>org.apache.logging.log4j</groupId>
